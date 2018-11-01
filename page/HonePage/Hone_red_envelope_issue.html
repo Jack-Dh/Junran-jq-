@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骏然SCRM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,
+    maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/HonePage/Hone_red_envelope_issue.js"></script>
+    <script src="../../js/jqPaginator.js"></script>
+    <script src="../../public/js/laydate.js"></script>
+    <script href="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="../../public/js/publicCliss.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styletwo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/media50px.min.css">
+    <link rel="stylesheet" type="text/css" href="../../public/layDate-v5.0.9/laydate/theme/default/laydate.css">
+</head>
+<body>
+
+<div>
+
+    <input type="checkbox" id="Cti_checkbox_title">
+    <span class="Future_generations">全选</span>
+    <button id="red_issue_envelope">批量发送</button>
+
+    <select id="issue_down">
+        <option>全部</option>
+        <option>已发送</option>
+        <option>未发送</option>
+    </select>
+    <input placeholder="开始时间" id="startTime">
+    <input placeholder="结束时间" id="endTime">
+    <input type="button" value="搜索" id="search" class="searchBut">
+
+
+
+    <table border="1" class="rev_cti_list">
+        <tr class="rev_cti_list_title">
+            <td>序号</td>
+            <td>活动名称</td>
+            <td>用户名</td>
+            <td>发送时间</td>
+            <td>红包金额（元）</td>
+            <td>状态</td>
+            <td>操作</td>
+            <td>操作人</td>
+        </tr>
+    </table>
+    <p class="page_num"></p>
+    <div id="red_issue_fenpag"></div>
+
+
+</div>
+
+
+
+</body>
+</html>

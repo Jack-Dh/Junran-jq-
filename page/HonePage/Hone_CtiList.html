@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骏然SCRM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,
+    maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/HonePage/Hone_CtiList.js"></script>
+    <script src="../../js/jqPaginator.js"></script>
+    <script src="../../public/js/laydate.js"></script>
+    <script href="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="../../public/js/publicCliss.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styletwo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/media50px.min.css">
+    <link rel="stylesheet" type="text/css" href="../../public/layDate-v5.0.9/laydate/theme/default/laydate.css">
+
+</head>
+<body>
+<!--图层遮罩-->
+<div class="mask"></div>
+<div class="Cti_list" id="app">
+    <input type="checkbox" id="Cti_checkbox_title">
+    <span class="Future_generations">全选</span>
+    <button id="Cti_Batch_open">批量启用</button>
+    <button id="Cti_Batch_end">批量停用</button>
+    <input class="admin_search" placeholder="根据用户名搜索">
+    <select id="cti_down">
+        <option>全部活动</option>
+        <option>启用</option>
+        <option>停用</option>
+    </select>
+    <input type="button" value="搜索" id="search" class="searchBut">
+    <input type="button" value="添加" class="searchBut" id="addctibut">
+
+
+    <div class="Cti_details_page" id="Cti_details_page">
+        <!--<img id="Cti_deta_img" style="margin-left: 90%;padding: 0.1rem" src="../../img/down.png">-->
+        <!--<p id="Cti_deta_img" class="Shut_down">关闭</p>-->
+        <p>活动详情
+            <img src="../../img/guanbi.png" class="add_admin_shut" id="Cti_deta_img">
+        </p>
+        <!--<table id="Cti_details"></table>-->
+
+    </div>
+    <!--添加活动模块-->
+    <div class="add_cti">
+        <p>添加活动
+            <img src="../../img/guanbi.png" class="add_admin_shut" id="shut_cti">
+        </p>
+        <label>活动名称</label> <input id="add_Cti_name" placeholder="活动名称" class="add_Cti_name">
+        <br>
+        <!--活动店铺-->
+        <label>活动店铺</label> <input id="add_Cti_store" placeholder="活动店铺" class="add_Cti_name">
+        <br>
+        <!--活动最大参与人数-->
+        <label>最大人数</label> <input id="Cti_participate_num" placeholder="最大参与人数/请输入整数" class="add_Cti_name" onkeyup="this.value=this.value.replace(/\D/g,'')">
+        <br>
+        <!--活动说明-->
+        <label>活动说明</label> <textarea name="txt" clos="100" rows="5" warp="virtual" placeholder="活动说明" id="add_Cti_instructions"></textarea>
+        <br>
+        <!--参与条件-->
+        <label>参与条件</label> <textarea name="txt" clos="100" rows="5" warp="virtual" placeholder="参与条件" id="add_Cti_conditions"></textarea>
+        <br>
+        <!--活动奖励-->
+        <label>活动奖励</label> <textarea name="txt" clos="100" rows="5" warp="virtual" placeholder="活动奖励" id="add_Cti_reward"></textarea>
+        <form id="uploadForm" enctype="multipart/form-data">
+
+            <label class="time_label">店铺图片：</label>
+            <span id="upload">选择文件</span>
+            <input type="file" id="file" name="imgFile" id="imgFile">
+
+        </form>
+
+        <img id="add_Cti_img" src="">
+        <br>
+        <label class="time_label">开始时间：</label><input id="add_Cti_start_time" placeholder="活动开始时间">
+        <br>
+        <label class="time_label">结束时间：</label><input  id="add_Cti_end_time" placeholder="活动结束时间">
+        <br>
+        <!--下拉选择框-->
+        <label class="time_label">选择需要参与活动的红包：</label>
+        <select id="add_Cti_option"></select>
+        <br>
+        <button id="add_Cti_button" class="add_Cti_button">创建</button>
+
+    </div>
+
+
+    <table border="1" id="Ctivityt_list">
+        <tr class="Cti_title">
+            <td>序号</td>
+            <td>活动名称</td>
+            <td>活动奖励</td>
+            <td>参与人数</td>
+            <td>开始时间</td>
+            <td>结束时间</td>
+            <td>操作</td>
+        </tr>
+    </table>
+    <!--分页模块-->
+    <p class="text"></p>
+    <div id="Hone_addCti_fenpage"></div>
+</div>
+</body>
+</html>

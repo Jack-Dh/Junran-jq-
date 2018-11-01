@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骏然SCRM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,
+    maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/HonePage/Hone_redEbvelope_list.js"></script>
+    <script src="../../js/jqPaginator.js"></script>
+    <script href="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="../../public/js/publicCliss.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styletwo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/media50px.min.css">
+</head>
+<body>
+<!--遮罩层--->
+<div class="mask"></div>
+<input type="checkbox" id="red_checkbox_title" class="Cti_list">
+<span class="Future_generations">全选</span>
+<button id="red_Batch_open">批量启用</button>
+<button id="red_Batch_end">批量停用</button>
+<input class="admin_search" placeholder="根据用户名搜索">
+<select id="red_down">
+    <option>全部红包</option>
+    <option>启用</option>
+    <option>停用</option>
+</select>
+<input type="button" value="搜索" id="search" class="searchBut">
+<input type="button" value="创建红包" class="red_add_but">
+
+<!--创建红包-->
+<div class="add_redenvelope">
+    <p>创建红包
+        <img src="../../img/guanbi.png" class="add_red_shut">
+    </p>
+    <div>
+        <label>红包名称</label>
+        <!--<span class="asd_red_mandatory">必填</span>-->
+        <input placeholder="红包名称" id="name" class="add_red_input">
+        <br>
+        <label>红包金额</label>
+        <input  placeholder="金额 单位:元" class="add_red_input" id="totalAmount"  onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')">
+        <br>
+        <label>红包祝福</label>
+        <input placeholder="红包祝福语" id="wishing" class="add_red_input">
+        <br>
+        <label>活动名称</label>
+        <input placeholder="活动名称" id="actName" class="add_red_input">
+        <br>
+        <label>商户名称</label>
+        <input placeholder="商户名称" id="sendName" class="add_red_input">
+        <br>
+        <label>红包备注</label>
+        <input placeholder="备注" id="remark" class="add_red_input">
+        <br>
+        <button class="add_red_button" id="add_red_button" >创建</button>
+    </div>
+
+</div>
+<!--红包详情模块-->
+<div class="red_details_page" id="red_details_page">
+    <!--<p id="red_deta_img" class="Shut_down">关闭</p>-->
+    <p>红包详情
+        <img src="../../img/guanbi.png" class="add_admin_shut" id="red_deta_img">
+    </p>
+</div>
+<table border="1" id="redEbv_list">
+    <tr class="Red_title">
+        <td>序号</td>
+        <td>活动名称</td>
+        <td>红包名称</td>
+        <td>商户名称</td>
+        <!--<td>发放人数</td>-->
+        <td>红包金额</td>
+        <td>红包祝福</td>
+        <td>备注</td>
+        <td>操作</td>
+    </tr>
+</table>
+<!--分页模块-->
+<p class="text"></p>
+<div id="redEbv_list_fenpage"></div>
+
+</body>
+</html>

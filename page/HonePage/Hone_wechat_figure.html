@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骏然SCRM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,
+    maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/HonePage/Hone_wechat_figure.js"></script>
+    <script src="../../public/js/publicCliss.js"></script>
+    <script src="../../public/js/publicFunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styletwo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/media50px.min.css">
+</head>
+<body style="background-color:#f3f3f3;">
+
+
+<!--添加微信端首页轮播图-->
+<!--<div class="figureImgbox">-->
+<!--<span class="fileValue">添加图片</span>-->
+<!--<form id="uploadForm" enctype="multipart/form-data">-->
+<!--<input type="file" name="imgFile" id="imgFile">-->
+<!--</form>-->
+<!--</div>-->
+<span style="margin-top: 1%;font-size: 0.1rem;color: #97a3ad;margin-left: 0.1rem">客户端首页轮播图</span>
+<hr>
+<div class="containerImg">
+    <!--第一张轮播图-->
+    <div class="SoncontainerImg">
+
+        <label for="addImgFile_one">
+            <img class="one" src="../../img/addImgFigure.png">
+        </label>
+        <form id="addUploadForm_one" enctype="multipart/form-data">
+            <input type="file" name="imgFile" id="addImgFile_one">
+        </form>
+        <p class="timeone"></p>
+        <img id="ImgDelone" class="ImgDel" src="../../img/del.png" title="删除">
+    </div>
+    <!--第二张轮播图-->
+    <div class="SoncontainerImg">
+        <label for="addImgFile_two">
+            <img class="two" src="../../img/addImgFigure.png">
+        </label>
+        <form id="addUploadForm_two" enctype="multipart/form-data">
+            <input type="file" name="imgFile" id="addImgFile_two">
+        </form>
+        <p class="timetwo"></p>
+        <img class="ImgDel" id="ImgDeltwo" src="../../img/del.png" title="删除">
+    </div>
+    <!--第三张轮播图-->
+    <div class="SoncontainerImg">
+        <label for="addImgFile_three">
+            <img class="three" src="../../img/addImgFigure.png">
+        </label>
+        <form id="addUploadForm_three" enctype="multipart/form-data">
+            <input type="file" name="imgFile" id="addImgFile_three">
+        </form>
+        <p class="timethree"></p>
+        <img class="ImgDel" id="ImgDelthree" src="../../img/del.png" title="删除">
+    </div>
+    <!--第四张轮播图-->
+    <div class="SoncontainerImg">
+        <label for="addImgFile_four">
+            <img class="four" src="../../img/addImgFigure.png">
+        </label>
+        <form id="addUploadForm_four" enctype="multipart/form-data">
+            <input type="file" name="imgFile" id="addImgFile_four">
+        </form>
+        <p class="timefour"></p>
+        <img class="ImgDel" id="ImgDelfour" src="../../img/del.png" title="删除">
+    </div>
+    <!--第五张轮播图-->
+    <div class="SoncontainerImg">
+        <label for="addImgFile_five">
+            <img class="five" src="../../img/addImgFigure.png">
+        </label>
+        <form id="addUploadForm_five" enctype="multipart/form-data">
+            <input type="file" name="imgFile" id="addImgFile_five">
+        </form>
+        <p class="timefive"></p>
+        <img class="ImgDel" id="ImgDelfive" src="../../img/del.png" title="删除">
+    </div>
+
+</div>
+
+
+<span style="margin-top: 1%;font-size: 0.1rem;color: #97a3ad;margin-left: 0.1rem">客户端微信菜单设置</span>
+<hr>
+<!--微信菜单-->
+<img id="addmenu" src="../../img/add.png" title="添加一级菜单"><br>
+<div class="menu"></div>
+
+<button class="save">保存</button>
+</body>
+</html>

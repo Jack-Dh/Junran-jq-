@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骏然SCRM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,
+    maximum-scale=1,user-scalable=0">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script SRC="../../js/HonePage/Hone_wechat_fans.js"></script>
+    <script type="text/javascript" src="../../public/js/page.js"></script>
+    <script src="../../js/jqPaginator.js"></script>
+    <script src="../../public/js/publicCliss.js"></script>
+    <script src="../../public/js/publicFunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styletwo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/media50px.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">-->
+</head>
+<body>
+<!--遮罩层-->
+<div class="mask"></div>
+<!--创建标签模块-->
+<div class="add_fans_label">
+    <p>创建标签
+        <img src="../../img/guanbi.png" class="add_fans_labe_shut">
+    </p>
+    <!--分割线--->
+    <div style="margin-top: 1%;font-size: 0.1rem;color: #97a3ad">
+        <span style="margin-left: 0.1rem">全部标签</span>
+        <hr style="background-color: #e0e0df;border: none;height: 1px">
+    </div>
+
+    <div class="add_admin_input"></div>
+    <div style="margin-top: 10%;font-size: 0.1rem;color: #97a3ad">
+        <span style="margin-left: 0.1rem">新建标签</span>
+        <hr style="background-color: #e0e0df;border: none;height: 1px">
+    </div>
+    <input  class="addLabel" placeholder="创建标签"><br>
+    <button class="Home_addbtn" id="addLabelBtn">新建</button>
+</div>
+
+<!--用户添加模块-->
+<div class="new_fans_label">
+    <p>添加标签
+        <img src="../../img/guanbi.png" class="add_fans_labe_shut">
+    </p>
+    <!--分割线--->
+    <div style="margin-top: 1%;font-size: 0.1rem;color: #97a3ad">
+        <span style="margin-left: 0.1rem">全部标签</span>
+        <hr style="background-color: #e0e0df;border: none;height: 1px">
+    </div>
+    <ul class="newFansLabel"></ul>
+    <!--分割线--->
+    <div style="margin-top: 10%;font-size: 0.1rem;color: #97a3ad">
+        <span style="margin-left: 0.1rem">已有标签</span>
+        <hr style="background-color: #e0e0df;border: none;height: 1px">
+    </div>
+
+    <ul class="Haschosen"></ul>
+    <button class="Home_addbtn" id="newLabelBtn">保存</button>
+</div>
+
+
+<div class="Hone_wechat">
+    <div id="Hone_All_fans"><!--显示全部粉丝-->
+        <input class="admin_search" placeholder="根据用户名搜索">
+        <select id="drop_down">
+            <option>全部粉丝</option>
+            <option>已关注</option>
+            <option>已取关</option>
+        </select>
+        <select id="downLabel">
+            <option value="">标签查询</option>
+        </select>
+        <input type="button" value="搜索" id="search" class="searchBut">
+        <input type="button" value="创建标签" id="addlabelbox" class="searchBut">
+        <table class="Hone_wechat_list" border="0.9" cellspacing="0" cellpadding="0" id="Hone_wechat_list">
+            <tr>
+                <td>序号</td>
+                <td>头像</td>
+                <td>昵称</td>
+                <td>地区</td>
+                <td>性别</td>
+                <td>状态</td>
+                <td>关注来源</td>
+                <td>关注时间</td>
+                <td>用户标签</td>
+                <td>操作</td>
+            </tr>
+        </table>
+        <!--分页标签-->
+        <p id="All_text" class="text"></p>
+        <div class="fenpage" id="All_fenpage"></div>
+    </div>
+</div>
+
+</body>
+</html>
